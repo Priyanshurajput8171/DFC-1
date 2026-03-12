@@ -8,6 +8,7 @@ import { Footer } from '../components/Footer'
 import Partners from '../components/Partners'
 import WhyChooseUs from '../components/WhyChooseUs'
 import Review from '../components/Review'
+import PopularDishes from '../components/Popular'
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
        <Navbar/>
      <main>
       <HeroSection/>
+      <PopularDishes/>
       <Partners/>
       <WhyChooseUs/>
       {/* <About/> */}
