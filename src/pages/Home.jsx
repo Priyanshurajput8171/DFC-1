@@ -7,7 +7,6 @@ import Contact from '../components/Contact'
 import { Footer } from '../components/Footer'
 import Partners from '../components/Partners'
 import WhyChooseUs from '../components/WhyChooseUs'
-import PopularDishes from '../components/popularDishes'
 import Review from '../components/Review'
 
 
@@ -17,7 +16,6 @@ const Home = () => {
        <Navbar/>
      <main>
       <HeroSection/>
-      <PopularDishes/>
       <Partners/>
       <WhyChooseUs/>
       {/* <About/> */}
