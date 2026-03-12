@@ -9,7 +9,7 @@ import tomatocut from "../assets/tomatocut.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br bg-[#d4d5cc]">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br bg-[#d4d5cc] pt-24 md:pt-28">
 
       {/* Floating Background Blur */}
       <div className="absolute w-[500px] h-[500px] bg-red-200 rounded-full blur-[150px] opacity-40 top-[-150px] left-[-100px]" />

@@ -1,4 +1,12 @@
 import React from "react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 import paneerButterMasala from "../assets/paneerbutter.jpg";
 import masalaDosa from "../assets/masaladosa.jpg";
 import vegBiryani from "../assets/vegbiryani.jpg";
@@ -7,7 +15,6 @@ import paneerTikka from "../assets/paneertikka.jpg";
 import dalTadka from "../assets/daltadka.jpg";
 import vegThali from "../assets/vegthali.jpg";
 import aaloParatha from "../assets/aaloparatha.jpg";
-
 
 const PopularDishes = () => {
 
@@ -24,14 +31,14 @@ const PopularDishes = () => {
 
   return (
     <section
-      className="py-12 bg-gradient-to-b from-[#659040] via-[#6cab33] to-[#5f9920] overflow-hidden relative transition-all duration-700"
+      className="py-12 bg-gradient-to-b from-[#659040] via-[#6cab33] to-[#5f9920] overflow-hidden relative"
       id="menu"
     >
 
-      {/* Floating Spice Icons */}
-   <div className="absolute top-20 left-10 text-3xl animate-float text-green-200">🌶️</div>
-<div className="absolute bottom-20 right-20 text-3xl animate-float text-green-200">🥬</div>
-<div className="absolute top-40 right-40 text-3xl animate-float text-green-200">🥕</div>
+      {/* Floating Food Icons */}
+      <div className="absolute top-20 left-10 text-3xl animate-float text-green-200">🌶️</div>
+      <div className="absolute bottom-20 right-20 text-3xl animate-float text-green-200">🥬</div>
+      <div className="absolute top-40 right-40 text-3xl animate-float text-green-200">🥕</div>
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -45,29 +52,35 @@ const PopularDishes = () => {
           </p>
         </div>
 
-        {/* Slider */}
-        <div className="relative overflow-hidden group">
+        {/* Swiper Slider */}
+        <Swiper
+          modules={[Pagination, Navigation]}
+          spaceBetween={30}
+          pagination={{ clickable: true }}
+          navigation
+          breakpoints={{
+            320: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+          }}
+        >
 
-          <div className="flex gap-8 animate-slide group-hover:[animation-play-state:paused]">
+          {menu.map((item) => (
 
-            {[...menu, ...menu].map((item, index) => (
-              <div
-                key={index}
-                className="min-w-[280px] backdrop-blur-xl bg-white/90 border border-white/40 rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300 relative"
-              >
+            <SwiperSlide key={item.id}>
 
-                {/* Veg Badge */}
-                {/* <span className="absolute top-4 right-4 bg-green-600 text-white text-xs px-2 py-1 rounded-full">
-                  VEG
-                </span> */}
+              <div className="backdrop-blur-xl bg-white/90 border border-white/40 rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300 relative">
 
-                {/* Image Placeholder */}
-                <div className="w-full h-40 bg-gray-200 rounded-xl flex items-center justify-center text-gray-400 mb-4">
-                 <img src={item.image} alt={item.name}
-                  className="w-full h-40 object-cover rounded-xl mb-4 transition duration-300 hover:scale-105"/>
+                {/* Dish Image */}
+                <div className="w-full h-40 rounded-xl overflow-hidden mb-4">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-full object-cover transition duration-300 hover:scale-105"
+                  />
                 </div>
 
-                {/* Title */}
+                {/* Dish Name */}
                 <h3 className="text-xl font-semibold text-gray-800">
                   {item.name}
                 </h3>
@@ -79,6 +92,7 @@ const PopularDishes = () => {
 
                 {/* Rating + Button */}
                 <div className="flex items-center justify-between mt-4">
+
                   <span className="text-yellow-500 font-semibold">
                     ⭐ {item.rating}
                   </span>
@@ -86,16 +100,19 @@ const PopularDishes = () => {
                   <button className="bg-[#5f9920] text-white px-4 py-2 rounded-lg text-sm hover:bg-[#4d7f19] transition">
                     Order
                   </button>
+
                 </div>
 
               </div>
-            ))}
 
-          </div>
+            </SwiperSlide>
 
-        </div>
+          ))}
+
+        </Swiper>
 
       </div>
+
     </section>
   );
 };
