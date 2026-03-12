@@ -1,20 +1,28 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import HeroSection from '../components/HeroSection'
-import About from '../components/About'
+// import About from '../components/About'
 import Gallery from '../components/Gallery'
 import Contact from '../components/Contact'
 import { Footer } from '../components/Footer'
+import Partners from '../components/Partners'
+import WhyChooseUs from '../components/WhyChooseUs'
+import PopularDishes from '../components/popularDishes'
+import Review from '../components/Review'
 
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors">
-     <Navbar/>
+       <Navbar/>
      <main>
       <HeroSection/>
-      <About/>
+      <PopularDishes/>
+      <Partners/>
+      <WhyChooseUs/>
+      {/* <About/> */}
       <Gallery/>
+      <Review/>
       <Contact/>
      </main>
      <Footer/>

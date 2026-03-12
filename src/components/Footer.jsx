@@ -1,36 +1,104 @@
-
-import { ArrowUp, Instagram, Mail, MapPin } from "lucide-react";
+import React from "react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Twitter } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="h-[70px] bg-[#5f9920] text-white flex items-center">
-      <div className="max-w-7xl mx-auto w-full px-6 flex justify-between items-center">
+    <footer className="w-full  bg-[#d4d5cc] pt-16 pb-6">
 
-        {/* Copyright */}
-        <p className="text-sm opacity-90">
-          © {new Date().getFullYear()} Priyanshu Rajput. All rights reserved.
-        </p>
+      <div className="max-w-7xl mx-auto px-6">
 
-        {/* Social Icons */}
-        <div className="flex items-center gap-4">
-          <a href="#" className="hover:scale-110 transition">
-            <Instagram size={20} />
-          </a>
+        {/* GRID */}
+        <div className="grid md:grid-cols-4 gap-10 text-gray-800">
 
-          <a href="#" className="hover:scale-110 transition">
-            <Mail size={20} />
-          </a>
+          {/* QUICK LINKS */}
+          <div>
+            <h3 className="text-red-500 font-semibold text-lg mb-4">
+              Quick Links
+            </h3>
 
-          <a href="#" className="hover:scale-110 transition">
-            <MapPin size={20} />
-          </a>
+            <ul className="space-y-2">
+              <li className="hover:text-red-500 cursor-pointer">Home</li>
+              <li className="hover:text-red-500 cursor-pointer">Menu</li>
+              <li className="hover:text-red-500 cursor-pointer">Reservations</li>
+              <li className="hover:text-red-500 cursor-pointer">About Us</li>
+              <li className="hover:text-red-500 cursor-pointer">Contact</li>
+            </ul>
+          </div>
 
-          <a
-            href="#hero"
-            className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition"
-          >
-            <ArrowUp size={18} />
-          </a>
+          {/* CONTACT */}
+          <div>
+            <h3 className="text-red-500 font-semibold text-lg mb-4">
+              Contact Us
+            </h3>
+
+            <div className="space-y-4">
+
+              <div className="flex gap-3 items-start">
+                <MapPin className="text-red-500 mt-1" size={20}/>
+                <p>
+                  123 Restaurant Street <br />
+                  City, State 12345
+                </p>
+              </div>
+
+              <div className="flex gap-3 items-center">
+                <Phone className="text-red-500" size={20}/>
+                <p>Phone: (123) 456-7890</p>
+              </div>
+
+              <div className="flex gap-3 items-center">
+                <Mail className="text-red-500" size={20}/>
+                <p>Email: info@restaurant.com</p>
+              </div>
+
+            </div>
+          </div>
+
+          {/* OPENING HOURS */}
+          <div>
+            <h3 className="text-red-500 font-semibold text-lg mb-4">
+              Opening Hours
+            </h3>
+
+            <p className="mb-2">
+              Monday - Friday: 11am - 10pm
+            </p>
+
+            <p>
+              Saturday - Sunday: 10am - 11pm
+            </p>
+          </div>
+
+          {/* SOCIAL */}
+          <div>
+            <h3 className="text-red-500 font-semibold text-lg mb-4">
+              Follow Us
+            </h3>
+
+            <div className="flex gap-4">
+
+              <div className="p-2 bg-red-500 rounded-full text-white hover:scale-110 transition cursor-pointer">
+                <Facebook size={18}/>
+              </div>
+
+              <div className="p-2 bg-red-500 rounded-full text-white hover:scale-110 transition cursor-pointer">
+                <Instagram size={18}/>
+              </div>
+
+              <div className="p-2 bg-red-500 rounded-full text-white hover:scale-110 transition cursor-pointer">
+                <Twitter size={18}/>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        {/* DIVIDER */}
+        <div className="border-t border-gray-300 mt-10 pt-6 text-center text-gray-700 text-sm">
+
+          © 2026 <span className="text-green-500">DFC</span>Roorkee. Created by Priyanshu Rajput and Raju Kubhakar.
+
         </div>
 
       </div>
