@@ -97,7 +97,7 @@ export const Footer = () => {
         {/* DIVIDER */}
         <div className="border-t border-gray-300 mt-10 pt-6 text-center text-gray-700 text-sm">
 
-          © 2026 <span className="text-green-500">DFC</span>Roorkee. Created by Priyanshu Rajput and Raju Kubhakar.
+          © 2026 <span className="text-green-500">DFC</span>Roorkee. Created by Priyanshu Rajput and Raju Kubhakarç.
 
         </div>
 
