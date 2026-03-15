@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
   }, []);
 
   return (
-    <section className="relative py-24 bg-[#d4d5cc] overflow-hidden">
+    <section id="about" className="relative py-24 bg-[#d4d5cc] overflow-hidden">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#5f9920]">
             Our Story

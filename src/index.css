@@ -2,3 +2,73 @@
 @theme {
   --color-primary: #3d7724;
 }
+@theme {
+  --animate-spin-slow: spin 25s linear infinite;
+  --animate-float: float 4s ease-in-out infinite;
+  --color-primary:#3d7724;
+}
+
+/* html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-padding-top: 80px;
+} */
+
+/* Custom keyframes */
+@keyframes float {
+  0%,100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+  @keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  animation: slide 28s linear infinite;
+}
+
+
+/* Floating icons animation */
+
+@keyframes float {
+  0%,100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes gradient-x {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 10s ease infinite;
+}
