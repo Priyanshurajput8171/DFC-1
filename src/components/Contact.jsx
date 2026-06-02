@@ -54,7 +54,7 @@ function Contact() {
               <div>
                 <h4 className="text-xl font-semibold">Instagram</h4>
                 <p className="text-gray-700 text-lg">
-                  @delicious_food_house
+                  @delicious_food_corner
                 </p>
               </div>
             </div>
@@ -64,7 +64,7 @@ function Contact() {
               <div>
                 <h4 className="text-xl font-semibold">Email</h4>
                 <p className="text-gray-700 text-lg">
-                  contact@deliciousfood.com
+                  contact@deliciousfoodcorner.com
                 </p>
               </div>
             </div>
@@ -74,7 +74,7 @@ function Contact() {
               <div>
                 <h4 className="text-xl font-semibold">Location</h4>
                 <p className="text-gray-700 text-lg">
-                  221B Baker Street, London, UK
+                  Roorkee, Ramnagar
                 </p>
               </div>
             </div>
